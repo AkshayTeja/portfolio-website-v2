@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import HeroBento from '@/components/portfolio/HeroBento'
-import TechStack from '@/components/portfolio/TechStack'
-import ProjectGallery from '@/components/portfolio/ProjectGallery'
-import ExperienceTimeline from '@/components/portfolio/ExperienceTimeline'
-import ConnectCard from '@/components/portfolio/ConnectCard'
+import { motion } from "framer-motion";
+import HeroBento from "@/components/portfolio/HeroBento";
+import TechStack from "@/components/portfolio/TechStack";
+import ProjectGallery from "@/components/portfolio/ProjectGallery";
+import ExperienceTimeline from "@/components/portfolio/ExperienceTimeline";
+import ConnectCard from "@/components/portfolio/ConnectCard";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -16,7 +16,7 @@ const containerVariants = {
       delayChildren: 0.2,
     },
   },
-}
+};
 
 export default function Portfolio() {
   return (
@@ -37,11 +37,11 @@ export default function Portfolio() {
         <ProjectGallery />
 
         {/* Experience Timeline */}
-        <ExperienceTimeline />
+        {/*<ExperienceTimeline />*/}
 
         {/* Connect Card */}
-        <ConnectCard />
+        {/*<ConnectCard />*/}
       </div>
     </motion.main>
-  )
+  );
 }

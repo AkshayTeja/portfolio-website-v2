@@ -1,26 +1,26 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 const techItems = [
-  { name: 'React', icon: '⚛️' },
-  { name: 'Next.js', icon: '▲' },
-  { name: 'TypeScript', icon: '🔷' },
-  { name: 'Tailwind', icon: '🌊' },
-  { name: 'Framer Motion', icon: '✨' },
-  { name: 'Node.js', icon: '🟢' },
-  { name: 'PostgreSQL', icon: '🐘' },
-  { name: 'Git', icon: '🔀' },
-]
+  { name: "Next.js", icon: "▲" },
+  { name: "Tailwind CSS", icon: "🎨" },
+  { name: "Cloud Development", icon: "☁️" },
+  { name: "Python and ML", icon: "🐍" },
+  { name: "MCP", icon: "⚡" },
+  { name: "Docker", icon: "🐋" },
+  { name: "Kubernetes", icon: "☸️" },
+  { name: "Databases", icon: "🗄️" },
+];
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
-}
+};
 
 export default function TechStack() {
   return (
@@ -68,5 +68,5 @@ export default function TechStack() {
         </div>
       </div>
     </motion.div>
-  )
+  );
 }

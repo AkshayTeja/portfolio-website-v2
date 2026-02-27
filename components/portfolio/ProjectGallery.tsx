@@ -1,50 +1,63 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack marketplace with real-time inventory management',
-    category: 'Frontend',
-    color: '#ffd700',
-    tags: ['React', 'Next.js', 'PostgreSQL'],
+    title: "KickOffGear",
+    description:
+      "Full-stack e-commerce football store featuring NLP-driven product search and an interactive chatbot.",
+    category: "Full Stack",
+    color: "#FFD899", // Soft Orange
+    tags: ["Next.js", "Supabase", "NLP", "Tailwind"],
   },
   {
     id: 2,
-    title: 'Design System',
-    description: 'Comprehensive component library with 50+ documented components',
-    category: 'Design',
-    color: '#e8f4f0',
-    tags: ['Tailwind', 'Storybook', 'Figma'],
+    title: "PhonkItUp",
+    description:
+      "Phonk music streaming platform with global trend charts and secure auth, reaching 30+ users in 24 hours",
+    category: "Full Stack",
+    color: "#B4F8C8", // Mint Green
+    tags: ["Next.js", "PostgreSQL", "Supabase", "Auth"],
   },
   {
     id: 3,
-    title: 'Analytics Dashboard',
-    description: 'Real-time data visualization with interactive charts',
-    category: 'Backend',
-    color: '#ffb84d',
-    tags: ['Next.js', 'Node.js', 'Charts'],
+    title: "COPD Management App",
+    description:
+      "Mobile app for chronic lung disease tracking, featuring real-time symptom logs and doctor search.",
+    category: "Mobile App",
+    color: "#FFAEBC", // Soft Pink
+    tags: ["React Native", "Expo", "Firestore"],
   },
   {
     id: 4,
-    title: 'Mobile App',
-    description: 'Cross-platform mobile application with offline support',
-    category: 'Mobile',
-    color: '#ff99cc',
-    tags: ['React Native', 'Firebase', 'Maps'],
+    title: "MelodyCraft",
+    description:
+      "AI-powered music composer that generates unique MIDI tracks. Won 'Best UI/UX' at a 200+ person hackathon.",
+    category: "AI / ML",
+    color: "#A0E7E5", // Pastel Cyan
+    tags: ["Next.js", "Deep Learning", "MIDI"],
   },
-]
+  {
+    id: 5,
+    title: "Project Reign",
+    description:
+      "Ed-tech platform with personalized learning styles and focus sessions. National Finalist at a hackathon.",
+    category: "EdTech",
+    color: "#FBE7C6", // Pale Yellow
+    tags: ["Python", "Langchain", "Node.js", "SQL"],
+  },
+];
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
-}
+};
 
 export default function ProjectGallery() {
   return (
@@ -101,5 +114,5 @@ export default function ProjectGallery() {
         ))}
       </div>
     </motion.div>
-  )
+  );
 }

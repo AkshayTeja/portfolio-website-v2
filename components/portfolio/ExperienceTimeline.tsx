@@ -1,50 +1,51 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 const experiences = [
   {
     id: 1,
-    year: '2024 - Present',
-    title: 'Senior Frontend Engineer',
-    company: 'TechCorp Inc',
-    description: 'Leading frontend architecture and mentoring junior developers',
-    color: '#ffd700',
+    year: "2026 - Present",
+    title: "Senior Frontend Engineer",
+    company: "TechCorp Inc",
+    description:
+      "Leading frontend architecture and mentoring junior developers",
+    color: "#ffd700",
   },
   {
     id: 2,
-    year: '2022 - 2024',
-    title: 'Full Stack Developer',
-    company: 'StartUp Labs',
-    description: 'Built and scaled web applications from zero to production',
-    color: '#e8f4f0',
+    year: "2022 - 2024",
+    title: "Full Stack Developer",
+    company: "StartUp Labs",
+    description: "Built and scaled web applications from zero to production",
+    color: "#e8f4f0",
   },
   {
     id: 3,
-    year: '2021 - 2022',
-    title: 'Frontend Developer',
-    company: 'Design Studio',
-    description: 'Created responsive UIs and interactive components',
-    color: '#ffb84d',
+    year: "2021 - 2022",
+    title: "Frontend Developer",
+    company: "Design Studio",
+    description: "Created responsive UIs and interactive components",
+    color: "#ffb84d",
   },
   {
     id: 4,
-    year: '2020 - 2021',
-    title: 'Junior Developer',
-    company: 'Code Academy',
-    description: 'Started journey with HTML, CSS, and JavaScript fundamentals',
-    color: '#ff99cc',
+    year: "2020 - 2021",
+    title: "Junior Developer",
+    company: "Code Academy",
+    description: "Started journey with HTML, CSS, and JavaScript fundamentals",
+    color: "#ff99cc",
   },
-]
+];
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
-}
+};
 
 export default function ExperienceTimeline() {
   return (
@@ -65,10 +66,12 @@ export default function ExperienceTimeline() {
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className={`flex ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}
+              className={`flex ${index % 2 === 0 ? "flex-row-reverse" : ""}`}
             >
               {/* Content */}
-              <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12'}`}>
+              <div
+                className={`w-1/2 ${index % 2 === 0 ? "pr-12 text-right" : "pl-12"}`}
+              >
                 <div
                   className="rounded-2xl border-3 border-black p-6"
                   style={{ backgroundColor: exp.color }}
@@ -136,5 +139,5 @@ export default function ExperienceTimeline() {
         ))}
       </div>
     </motion.div>
-  )
+  );
 }

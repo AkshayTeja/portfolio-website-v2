@@ -9,8 +9,9 @@ const projects = [
     description:
       "Full-stack e-commerce football store featuring NLP-driven product search and an interactive chatbot.",
     category: "Full Stack",
-    color: "#FFD899", // Soft Orange
+    color: "#FFD899",
     tags: ["Next.js", "Supabase", "NLP", "Tailwind"],
+    link: "https://kick-off-gear.vercel.app/",
   },
   {
     id: 2,
@@ -18,35 +19,49 @@ const projects = [
     description:
       "Phonk music streaming platform with global trend charts and secure auth, reaching 30+ users in 24 hours",
     category: "Full Stack",
-    color: "#B4F8C8", // Mint Green
+    color: "#B4F8C8",
     tags: ["Next.js", "PostgreSQL", "Supabase", "Auth"],
+    link: "https://phonk-it-up.vercel.app",
   },
   {
     id: 3,
+    title: "BRGNDY Digital Services",
+    description:
+      "A high-end professional website for a digital services agency showcasing specialized frontend solutions for local businesses.",
+    category: "Web Development",
+    color: "#B0D0D3",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    link: "https://brgndy-digital-services.vercel.app/",
+  },
+  {
+    id: 4,
+    title: "Grayrack",
+    description:
+      "E-commerce platform for industrial racking systems, featuring comprehensive product catalogs and detailed project showcases.",
+    category: "E-commerce",
+    color: "#C1E1C1",
+    tags: ["React", "Node.js", "CSS Modules", "PostgreSQL"],
+    link: "https://grayrack.com/",
+  },
+  {
+    id: 5,
     title: "COPD Management App",
     description:
       "Mobile app for chronic lung disease tracking, featuring real-time symptom logs and doctor search.",
     category: "Mobile App",
-    color: "#FFAEBC", // Soft Pink
+    color: "#FFAEBC",
     tags: ["React Native", "Expo", "Firestore"],
+    link: "https://github.com/AkshayTeja/copd_app",
   },
   {
-    id: 4,
+    id: 6,
     title: "MelodyCraft",
     description:
       "AI-powered music composer that generates unique MIDI tracks. Won 'Best UI/UX' at a 200+ person hackathon.",
     category: "AI / ML",
-    color: "#A0E7E5", // Pastel Cyan
+    color: "#A0E7E5",
     tags: ["Next.js", "Deep Learning", "MIDI"],
-  },
-  {
-    id: 5,
-    title: "Project Reign",
-    description:
-      "Ed-tech platform with personalized learning styles and focus sessions. National Finalist at a hackathon.",
-    category: "EdTech",
-    color: "#FBE7C6", // Pale Yellow
-    tags: ["Python", "Langchain", "Node.js", "SQL"],
+    link: "https://melody-craft.vercel.app/",
   },
 ];
 
@@ -106,6 +121,9 @@ export default function ProjectGallery() {
             <motion.button
               whileHover={{ scale: 0.95 }}
               whileTap={{ scale: 0.9 }}
+              onClick={() =>
+                window.open(project.link, "_blank", "noopener,noreferrer")
+              }
               className="rounded-xl border-3 border-black bg-black px-6 py-3 font-bold text-white transition-colors hover:bg-gray-800"
             >
               View Project →
